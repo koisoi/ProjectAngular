@@ -1,0 +1,70 @@
+<div class="outstanding">
+    <div class="outstanding__wrapper">
+
+        <div class="outstanding__crumbs">
+            <div class="container justify-content-center">
+                <div class="outstanding__crumbs-wrapper">
+                    <a [routerLink]="['/']" class="outstanding__crumbs-link">
+                        Главная
+                    </a>
+                    &nbsp;/ &nbsp;Выдающиеся выпускники
+                </div>
+            </div>
+        </div>
+
+        <div class="outstanding__top">
+            <div class="container">
+                <div class="outstanding__top-title">
+                    <h2 class="my_title">
+                        Выдающиеся выпускники
+                    </h2>
+                </div>
+                <div class="outstanding__top-info">
+                    Данные о выпускниках почерпнуты из информационного издания «Выдающиеся выпускники Томского
+                    государственного университета», выпущенного в 2013 году на базе ТГУ. Авторы-составители: С.Ф.
+                    Фоминых (ответственный редактор), С.А. Некрылов, М.В. Грибовский, Н.А. Глущенко, И.Б. Делич, Д.В.
+                    Хаминов, С.А. Меркулов, А.Н. Сорокин, Л.Л. Берцун, А.Н. Кузьмин, И.А. Дунбинский, А.О. Степнов, И.Л.
+                    Орловский.
+                </div>
+            </div>
+        </div>
+
+        <div class="outstanding__content">
+            <div class="container">
+                <div class="outstanding__content-years">
+                    1992 — 2012
+                </div>
+
+                <div
+                    class="students-row row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
+                    <div class="student card col-4 col-sm-4 col-md-3 col-lg-2" *ngFor="let stud of students1">
+                        <div class="card-img-crop">
+                            <img src={{stud.img}} class="card-img" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-title">{{stud.name}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outstanding__content-years">
+                    1920 — 1991
+                </div>
+
+                <div
+                    class="students-row row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
+                    <div class="student card col-4 col-sm-4 col-md-3 col-lg-2" *ngFor="let stud of students2">
+                        <div class="card-img-crop">
+                            <img src={{stud.img}} class="card-img" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-title">{{stud.name}}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

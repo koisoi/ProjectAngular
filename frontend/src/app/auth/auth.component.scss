@@ -1,0 +1,104 @@
+.auth__background{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index:3;
+  top:-1px;
+}
+.auth{
+  display: flex;
+  justify-content: center;
+}
+.auth__wrapper{
+  background-color: #4ab8ff;
+  text-align: center;
+  width: 500px;
+  background-color: white;
+  padding: 10px;
+  z-index: 4;
+  position:fixed;
+  border-radius: 10px;
+  margin-top: 250px;
+}
+.auth__top-bottom-or{
+  color:#B2B5C0
+}
+.auth__top-bottom-create-account{
+  color:#0072BC
+}
+.auth__top-bottom{
+  display: flex;
+  justify-content:space-around;
+}
+
+.auth__input
+{
+  width: 80%;
+  border:2px solid #0072BC;
+  border-radius: 3px;
+}
+.auth__button{
+  width: 80%;
+  background-color: #0072BC;
+  color: #ffffff;
+  height: 35px;
+  border-radius: 5px;
+}
+.auth__bottom{
+  margin-left: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.auth__bottom-checkbox-button{
+  padding-top: 2px;
+  margin-right: .2em;
+  width: 14px;
+  height: 14px;
+}
+@media (max-width: 698px) {
+  .auth__bottom{
+    display: block;
+    justify-content: center;
+    align-content: center;
+  }
+  .auth__top-bottom{
+    flex-direction: column;
+  }
+  p{
+    font-size: 13px;
+  }
+  label{
+    font-size: 13px;
+  }
+  .auth__button{
+    font-size: 13px;
+  }
+}
+@media (max-width: 800px) {
+  .auth__wrapper {
+    width: 60%;
+  }
+}
+@media (max-width: 698px) {
+  .auth__button{
+    height: auto;
+  }
+  ::placeholder{
+    font-size: 13px;
+  }
+}
+@media (max-width: 420px) {
+  .auth__top-title{
+    font-size: 20px;
+  }
+}
+@media (max-width: 390px) {
+  label{
+    font-size:11px
+  }
+}
+
+

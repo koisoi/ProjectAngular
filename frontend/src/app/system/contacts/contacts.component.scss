@@ -1,0 +1,175 @@
+a,body,img {
+  margin:0;
+  padding:0;
+  border:0;
+  font:inherit;
+  vertical-align:baseline;
+}
+
+body{
+  line-height:1;
+  overflow:hidden;
+  margin-bottom: 80px;
+}
+
+.photo,.photo img {
+  box-sizing:border-box;
+}
+
+.container-img {
+  width:100%;
+  margin-top:50px;
+  max-width:960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo {
+  float:left;
+  width:33.333333%;
+  padding:10px;
+}
+
+.photo img {
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.photo a:hover {
+  opacity:.5;
+}
+
+.photo a {
+  display:block;
+  position:relative;
+}
+
+.photo:hover>a:after {
+  visibility:visible;
+}
+
+.photo figcaption {
+  color:#999;
+  text-align:center;
+  margin-top:20px;
+}
+
+#gallery {
+  display: block;
+  margin-bottom:60px;
+}
+
+#gallery:after {
+  height:0;
+  clear:both;
+}
+
+.success__crumbs {
+  /*font-family: "Open Sans", sans-serif;*/
+  color: white;
+  background-color: #0072bc;
+  padding: 5px;
+}
+
+.success__crumbs-link {
+  color: white;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.success__top {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.p-text1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.p-text2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacts {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.container-map {
+  height: 450px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+iframe{
+  height: 450px;
+  width: 100%;
+}
+
+.pre-img{
+  height: 20px;
+  background-color: #1a254a;
+}
+
+.name{
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #cccccc;
+}
+
+.post-img{
+  background-color: #1a254a;
+  margin-bottom: 60px;
+}
+
+.map {
+  text-align: center;
+  margin-bottom: 57px;
+}
+
+#map-test {
+  width: auto;
+  height: 500px;
+}
+
+@media (max-width: 600px) {
+
+  #gallery{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+  }
+  .photo{
+    width: 100%;
+  }
+
+  .p-text2{
+    width: 100%;
+  }
+}
+
+@media (max-width: 410px) {
+
+  #gallery{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,1fr);
+  }
+  .photo{
+    width: 100%;
+  }
+
+}

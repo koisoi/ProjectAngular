@@ -1,0 +1,82 @@
+<div class="success">
+    <div class="success__wrapper">
+
+        <div class="success__crumbs">
+            <div class="container justify-content-center">
+                <div class="success__crumbs-wrapper">
+                    <a href="#" class="success__crumbs-link">
+                        Главная
+                    </a>
+                    &nbsp;/ &nbsp;Успехи университета
+                </div>
+            </div>
+        </div>
+
+        <div class="success__top">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 justify-content-between align-items-center">
+                    <div class="success__top-title col-md-8">
+                        <h2 class="my_title">
+                            Категория: Успехи университета
+                        </h2>
+                    </div>
+
+                    <div class="success__top-search col-md-3">
+                        <div class="search__wrapper align-items-center">
+                            <input class="search-bar" type="search" />
+                            <button class="search-button" type="submit"><img class="icon"
+                                    src="../../../assets/img/search.svg"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success__content">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    <div class="news card" *ngFor="let piece of news.slice((page-1)*newsByPage, page*newsByPage)">
+                        <div class="card-img-crop">
+                            <img src={{piece.img}} class="card-img" alt="...">
+                        </div>
+                        <p class="card-info">
+                            <span class="card-category card-category-education">{{piece.category}}</span>
+                            <span class="card-publish-time">{{piece.date}}</span>
+                        </p>
+                        <div class="card-body">
+                            <a href="#" class="card-title">{{piece.title}}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="success__pagination">
+                    <ul class="pagination">
+                        <li class="page-item page-link prev" *ngIf="page != 1" (click)="page = page - 1">
+                            <a>
+                                <img class="page-icon icon" src="../../../assets/img/previous.svg">
+                            </a>
+                        </li>
+                        <li class="page-item page-link" *ngIf="(page == maxPage) && (maxPage-2 >= 1)"
+                            (click)="page = maxPage-2">
+                            <a>{{maxPage-2}}</a>
+                        </li>
+                        <li class="page-item page-link" *ngIf="page != 1" (click)="page = page-1"><a>{{page-1}}</a></li>
+                        <li class="page-item page-link page-link-selected"><a>{{page}}</a></li>
+                        <li class="page-item page-link" *ngIf="page != maxPage" (click)="page = page+1">
+                            <a>{{page+1}}</a>
+                        </li>
+                        <li class="page-item page-link" *ngIf="(page == 1) && (maxPage >= 3)"><a
+                                (click)="page = 3">3</a>
+                        </li>
+                        <li class="page-item page-link next" *ngIf="page != maxPage">
+                            <a (click)="page = page+1">
+                                <img class="page-icon icon" src="../../../assets/img/next.svg">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

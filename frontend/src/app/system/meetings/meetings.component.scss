@@ -1,0 +1,70 @@
+.meetings__crumbs
+{
+  font-family: "Open Sans";
+  color:white;
+  background-color: #0072BC;
+  padding: 5px;
+}
+.meetings__text-caption{
+  font-family: Merriweather;
+  color:#0072BC;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.meetings__text-text{
+  font-family: "Open Sans";
+  font-size: 20px;
+  line-height: 1.5;
+}
+.meetings__slider .swiper {
+  max-height: 600px;
+}
+
+.main__slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.meetings__slider-bottom {
+  font-size: 20px;
+  font-family: "Open Sans";
+  text-align: center;
+  background-color: #1A254A;
+  color:#ffffff;
+  margin-top: 5px;
+  padding-top:8px;
+  padding-bottom:8px;
+}
+.meetings__cards{
+  margin-top: 50px;
+}
+.meetings__cards__wrapper{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-gap: 50px;
+  margin-bottom: 30px;
+}
+.card{
+  color:white;
+  background-color: #0065A7;
+  border-radius: 15px;
+}
+.card-description{
+  padding-left: 10px;
+}
+.card-img-wrapper{
+  padding: 10px;
+  height:100%;
+}
+.card-img{
+  border-radius: 10px;
+  min-height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 991px) {
+  .meetings__cards__wrapper{
+    grid-template-columns: repeat(1,1fr);
+  }
+}

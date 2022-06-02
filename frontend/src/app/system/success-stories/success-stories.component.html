@@ -1,0 +1,70 @@
+<div class="projects">
+    <div class="projects__crumbs">
+        <div class="container justify-content-center">
+            <div class="projects__crumbs-wrapper">
+                <a href="#" class="projects__crumbs-link"> Главная </a>
+                &nbsp;/ &nbsp;Истории успеха
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="projects__wrapper">
+            <div class="row align-items-center">
+                <div class="project__top-title">
+                    <h2 class="my_title stories-title">Истории успеха</h2>
+                </div>
+            </div>
+            <div class="projects__row">
+                <div class="projects__row-wrapper row row-cols-lg-2 justify-content-between">
+                    <div class="project col-lg-5"
+                        *ngFor="let story of stories.slice((page-1)*storiesByPage, page*storiesByPage)">
+                        <div class="project-wrapper row row-cols-1 align-items-center">
+                            <img class="project-img" src={{story.img}} />
+                            <div class="project-text row rows-cols-1 justify-content-center">
+                                <div class="project-title">{{story.title}}</div>
+                                <div class="project-info" [innerHTML]="story.info">
+
+                                </div>
+                                <div class="project-read-more-wrapper">
+                                    <a class="project-read-more">читать больше >></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="success__pagination">
+            <ul class="pagination">
+                <li class="page-item page-link prev" *ngIf="page != 1" (click)="page = page - 1">
+                    <a>
+                        <img class="page-icon icon" src="../../../assets/img/previous.svg">
+                    </a>
+                </li>
+                <li class="page-item page-link" *ngIf="(page == maxPage) && (maxPage-2 >= 1)"
+                    (click)="page = maxPage-2">
+                    <a>{{maxPage-2}}</a>
+                </li>
+                <li class="page-item page-link" *ngIf="page != 1" (click)="page = page-1"><a>{{page-1}}</a></li>
+                <li class="page-item page-link page-link-selected"><a>{{page}}</a></li>
+                <li class="page-item page-link" *ngIf="page != maxPage" (click)="page = page+1">
+                    <a>{{page+1}}</a>
+                </li>
+                <li class="page-item page-link" *ngIf="(page == 1) && (maxPage >= 3)"><a (click)="page = 3">3</a>
+                </li>
+                <li class="page-item page-link next" *ngIf="page != maxPage">
+                    <a (click)="page = page+1">
+                        <img class="page-icon icon" src="../../../assets/img/next.svg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

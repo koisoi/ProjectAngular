@@ -1,0 +1,141 @@
+.outstanding__crumbs {
+    color: white;
+    background-color: #0072bc;
+    padding: 5px;
+}
+
+.outstanding__crumbs-link {
+    color: white;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.outstanding__top {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.outstanding__top-title {
+    margin-left: 40px;
+}
+
+.outstanding__top-info {
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 27px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.outstanding__content-years {
+    background-color: #1a254a;
+    color: white;
+    padding: 5px;
+    padding-left: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    margin: 10px 25px;
+    margin-bottom: 20px;
+    word-wrap: normal;
+    padding: 0;
+    border: none;
+    border-radius: 0.75rem;
+
+    &:first-child,
+    &:nth-child(5n) {
+        background-color: #0072bc;
+    }
+
+    &:nth-child(2),
+    &:nth-child(6n) {
+        background-color: #2b88c3;
+    }
+
+    &:nth-child(3),
+    &:nth-child(7n) {
+        background-color: #4c82a6;
+    }
+
+    &:nth-child(4),
+    &:nth-child(8n) {
+        background-color: #0065a7;
+    }
+}
+
+.card-title {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: white;
+}
+
+.card-img {
+    border-radius: 0 !important;
+    flex-shrink: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.card-img-crop {
+    max-height: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.card-body {
+    padding: 10px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .my_title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .my_title {
+        font-size: 25px;
+    }
+
+    .card-img-crop {
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-width: 401px) {
+    .my_title {
+        font-size: 20px;
+    }
+
+    .card-title {
+        font-size: 15px;
+    }
+
+    .card-img-crop {
+        max-height: 150px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .card-title {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-widh: 300px) {
+    .card-img-crop {
+        max-height: 100px;
+    }
+}

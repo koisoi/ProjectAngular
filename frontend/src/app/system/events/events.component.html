@@ -1,0 +1,59 @@
+<div class="back"></div>
+<div class="events">
+    <div class="events__crumbs">
+        <div class="container justify-content-center">
+            <div class="events__crumbs-wrapper">
+                <a href="#" class="events__crumbs-link"> Главная </a>
+                &nbsp;/ &nbsp;События
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="events__wrapper">
+            <div class="row align-items-center">
+                <div class="events__top-title">
+                    <h2 class="my_title events-title">События</h2>
+                </div>
+            </div>
+            <ul class="events__list" *ngFor="let event of events.slice((page-1)*eventsByPage, page*eventsByPage)">
+                <li class="event row row-cols-1 row-md-cols-2">
+
+                    <div class="event-wrapper align-items-center">
+                        <div class="event-img col-md-3"><img src={{event.img}}></div>
+                        <div class="event-info-wrapper align-items-center">
+                            <div class="event__title"><a>{{event.title}}</a></div>
+                            <p class="event__info">{{event.info}}
+                            </p>
+                            <strong class="event__date">{{event.date}}</strong>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="success__pagination">
+                <ul class="pagination">
+                    <li class="page-item page-link prev" *ngIf="page != 1" (click)="page = page - 1">
+                        <a>
+                            <img class="page-icon icon" src="../../../assets/img/previous.svg">
+                        </a>
+                    </li>
+                    <li class="page-item page-link" *ngIf="(page == maxPage) && (maxPage-2 >= 1)"
+                        (click)="page = maxPage-2">
+                        <a>{{maxPage-2}}</a>
+                    </li>
+                    <li class="page-item page-link" *ngIf="page != 1" (click)="page = page-1"><a>{{page-1}}</a></li>
+                    <li class="page-item page-link page-link-selected"><a>{{page}}</a></li>
+                    <li class="page-item page-link" *ngIf="page != maxPage" (click)="page = page+1">
+                        <a>{{page+1}}</a>
+                    </li>
+                    <li class="page-item page-link" *ngIf="(page == 1) && (maxPage >= 3)"><a (click)="page = 3">3</a>
+                    </li>
+                    <li class="page-item page-link next" *ngIf="page != maxPage">
+                        <a (click)="page = page+1">
+                            <img class="page-icon icon" src="../../../assets/img/next.svg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

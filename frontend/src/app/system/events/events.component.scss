@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'Architectural';
+    src: url(../../../assets/fonts/Architectural.ttf);
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url(../../../assets/fonts/CormorantGaramond-Medium.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url(../../../assets/fonts/CormorantGaramond-Bold.ttf);
+    font-weight: 700;
+}
+
+.back {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #F1F0EA;
+    opacity: 1;
+    z-index: -21;
+    top: -1px;
+}
+
+.events__crumbs {
+    color: white;
+    background-color: #0072bc;
+    padding: 5px;
+}
+
+.events__crumbs-link {
+    color: white;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.events__top-title {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.events__list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.event {
+    margin-bottom: 20px;
+
+    img {
+        float: left;
+        flex-shrink: 0;
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+    }
+}
+
+.event-img {
+    max-height: 300px;
+    min-height: 300px;
+    height: 300px;
+    max-width: 300px;
+    min-width: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 0;
+    float: left;
+    margin-right: 30px;
+    margin-left: 20px;
+
+    &:nth-of-type(2n) {
+        float: right;
+        margin-right: 20px;
+        margin-left: 30px;
+    }
+}
+
+.event__title {
+    color: black;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/*.title-img-crop {
+    max-height: 80px;
+    height: 80px;
+    max-width: 150px;
+    width: 150px;
+    
+
+    img {
+        object-fit: cover;
+    }
+}*/
+
+.event__info {
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    margin-bottom: 15px;
+
+    color: #000000;
+
+    padding-right: 30px;
+}
+
+.event__date {
+    display: inline;
+
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.success__pagination {
+    margin-bottom: 60px;
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-icon {
+    min-width: 20px;
+    min-height: 17px;
+    filter: invert(100);
+}
+
+.page-link {
+    border-radius: 50%;
+    margin-left: 2px;
+    margin-right: 2px;
+    background: #0072bc;
+    color: white;
+    cursor: pointer;
+}
+
+.event-wrapper {
+    padding: 20px 30px;
+    height: min-content;
+}
+
+.event-info-wrapper {
+    height: 100%;
+    min-height: 100%;
+    height: min-content;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+
+.page-link-selected {
+    @extend .page-link;
+    cursor: default;
+    background: #1a254a;
+}
+
+.prev,
+.next {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.my_title {
+    font-family: 'Architectural';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 128px;
+    letter-spacing: 0.04em;
+
+    color: #2A4494;
+}
+
+@media screen and (max-width: 991px) {
+    .my_title {
+        font-size: 64px;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .my_title {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 401px) {
+    .my_title {
+        font-size: 32px;
+    }
+}

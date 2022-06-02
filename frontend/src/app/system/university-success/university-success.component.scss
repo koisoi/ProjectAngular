@@ -1,0 +1,174 @@
+.success__crumbs {
+    color: white;
+    background-color: #0072bc;
+    padding: 5px;
+}
+
+.success__crumbs-link {
+    color: white;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.success__top {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.success__search {
+    width: auto;
+    height: 100%;
+}
+
+.search__wrapper {
+    white-space: nowrap;
+    border-radius: 23px;
+    outline: 1px solid #212121;
+    max-width: max-content;
+}
+
+.search-bar {
+    border: none;
+    padding: 7px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.search-button {
+    background: white;
+    border: none;
+    height: 36.8px;
+}
+
+.icon {
+    display: inline;
+}
+
+.news {
+    border: none;
+    border-radius: none;
+    margin-bottom: 60px;
+}
+
+.card-body {
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.card-img-crop {
+    max-height: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-img {
+    border-radius: 0 !important;
+    flex-shrink: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-category {
+    padding: 1px 15px;
+    margin-right: 20px;
+    color: white;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.card-publish-time {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #808080;
+}
+
+.card-category-education {
+    background-color: #0072bc;
+}
+
+.card-title {
+    display: block;
+    padding-left: 10px;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 32px;
+    color: #212121;
+    border-left: 4px solid #212121;
+    max-height: 64px;
+    overflow: hidden;
+}
+
+.success__pagination {
+    margin-bottom: 60px;
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-icon {
+    min-width: 20px;
+    min-height: 17px;
+    filter: invert(100);
+}
+
+.page-link {
+    border-radius: 50%;
+    margin-left: 2px;
+    margin-right: 2px;
+    background: #0072bc;
+    color: white;
+    cursor: pointer;
+}
+
+.page-link-selected {
+    @extend .page-link;
+    cursor: default;
+    background: #1a254a;
+}
+
+.prev,
+.next {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+
+@media screen and (max-width: 991px) {
+    .my_title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .success__top-search {
+        width: max-content;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .my_title {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 401px) {
+    .my_title {
+        font-size: 20px;
+    }
+}

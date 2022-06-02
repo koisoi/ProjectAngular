@@ -1,0 +1,103 @@
+.registration-body__wrapper{
+  margin-top:20px;
+  padding: 0px;
+}
+.star{
+  color:red;
+}
+.hint-text-top{
+
+}
+.hint-text
+{
+  font-family: "Open Sans";
+  font-size: 20px;
+}
+table{
+  justify-items: center;
+  border-spacing: 100px 0;
+}
+td{
+  padding-top:20px;
+  padding-right: 70px;
+
+}
+
+.translucent-hint-text
+{
+  opacity: 0.5;
+}
+.registration-body__title{
+  font-size:30px;
+  font-family:"Open Sans";
+  font-weight: bold;
+}
+.registration-body__input{
+  border:2px solid #0072BC;
+  height: 36px;
+  width:520px;
+}
+.registration-body__input-date{
+  height: 36px;
+  width:150px;
+  border:2px solid #0072BC;
+}
+.registration-body__text{
+  font-size:26px;
+  font-family: "Open Sans";
+}
+.registration-body__input-agree{
+  width:20px;
+  height:20px;
+  margin-right:20px;
+  border: 1px solid #0072BC;
+}
+.registration-body__next-button{
+  height:50px;
+  width:150px;
+  color:white;
+  font-family: "Open Sans";
+  font-size:26px;
+  background-color: #0072BC;
+}
+.registration-body__link-to-auth
+{
+  color:#0072BC;
+}
+.for_display{
+  display: flex;
+  justify-items: center;
+  grid-gap:10px;
+}
+@media (max-width: 998px) {
+  .registration-body__title{
+    font-size: 20px;
+  }
+  td{
+    display: block;
+  }
+}
+@media (max-width: 761px) {
+  .registration-body__title{
+    font-size: 20px;
+  }
+  .registration-body__input{
+    width:100%;
+  }
+}
+@media (max-width:575px){
+  .registration-body__wrapper{
+    margin-left:15px;
+    margin-right:20px;
+  }
+  .hint-text
+  {
+    font-size: 16px;
+  }
+  .registration-body__text{
+    font-size: 16px;
+  }
+  .registration-body__next-button{
+    font-size:18px;
+  }
+}

@@ -1,0 +1,302 @@
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=cb71c961-6926-4168-84c7-7b9544e967bd"
+   type="text/javascript"></script>
+
+<div class="main">
+   <div class="main__top">
+      <div class="main__photo">
+         <div class="main__photo-text">
+            <p>
+               Выпускник НГТУ
+            </p>
+         </div>
+         <div class="main__photo-text_bottom">
+            <p class="text">
+               Выпускники ТПУ – это более 165 тысяч человек по всему миру, которые стали частью <br> огромной команды
+               Томского политеха!
+               Для неравнодушных к своей Alma Mater этот <br> сайт станет уникальной площадкой, где можно получить
+               доступ к самой большой базе <br> выпускников.
+               Общайтесь, встречайтесь и обменивайтесь новостями с выпускниками <br> ТПУ со всех уголков мира!
+            </p>
+         </div>
+      </div>
+
+      <div class="main__map" id="main__map">
+         <ya-map [center]="[56.3257915206499,44.02913234497109]" [zoom]="17">
+            <ya-placemark [geometry]="[56.3257915206499,44.02913234497109]"></ya-placemark>
+         </ya-map>
+      </div>
+
+      <div class="main__slider">
+         <swiper [pagination]="{
+            clickable: true
+          }" [autoplay]="{delay: 2500, disableOnInteraction: false}" [grabCursor]="true" [loop]="true"
+            class="mySwiper">
+            <ng-template swiperSlide>
+               <img src="../../../assets/img/main__slider-img-one.png" alt="" class="main__slider-img">
+            </ng-template>
+            <ng-template swiperSlide>
+               <img src="../../../assets/img/main__slider-img-one.png" alt="" class="main__slider-img">
+            </ng-template>
+            <ng-template swiperSlide>
+               <img src="../../../assets/img/main__slider-img-one.png" alt="" class="main__slider-img">
+            </ng-template>
+            <ng-template swiperSlide>
+               <img src="../../../assets/img/main__slider-img-one.png" alt="" class="main__slider-img">
+            </ng-template>
+            <ng-template swiperSlide>
+               <img src="../../../assets/img/main__slider-img-one.png" alt="" class="main__slider-img">
+            </ng-template>
+            <ng-template swiperSlide>
+               <img src="../../../assets/img/main__slider-img-one.png" alt="" class="main__slider-img">
+            </ng-template>
+            <ng-template swiperSlide>
+               <img src="../../../assets/img/main__slider-img-one.png" alt="" class="main__slider-img">
+            </ng-template>
+            <ng-template swiperSlide>
+               <img src="../../../assets/img/main__slider-img-one.png" alt="" class="main__slider-img">
+            </ng-template>
+            <ng-template swiperSlide>
+               <img src="../../../assets/img/main__slider-img-one.png" alt="" class="main__slider-img">
+            </ng-template>
+         </swiper>
+      </div>
+   </div>
+
+   <div class="achievs">
+      <div class="container">
+         <div class="achievs__wrapper">
+            <p class="achievs__text">У нас много нового!</p>
+            <h2 class="my_title achievs__title">Теперь НГТУ - это</h2>
+            <ul class="achievs__list row">
+               <li class="achievs__list-item col-lg-3">
+                  <div class="achiev__list-circle">
+                     15000+
+                  </div>Студентов
+               </li>
+               <li class="achievs__list-item col-lg-3">
+                  <div class="achiev__list-circle">
+                     100000+
+                  </div>Выпускников
+               </li>
+               <li class="achievs__list-item col-lg-3">
+                  <div class="achiev__list-circle">
+                     Входит в ТОП-300
+                  </div>Лучших университетов мира
+               </li>
+               <li class="achievs__list-item col-lg-3">
+                  <div class="achiev__list-circle">
+                     Входит в ТОП-10
+                  </div>Ведущих университетов России
+               </li>
+            </ul>
+         </div>
+
+         <!-- ведет на регистрацию/ЛК -->
+         <div class="link__wrapper">
+            <a href="" class="my_link achievs__link">
+               #Я_учился_в_НГТУ
+            </a>
+         </div>
+      </div>
+   </div>
+
+   <div class="history">
+      <div class="container">
+         <div class="history__wrap row">
+            <div class="history__back col-lg-6">
+               <div class="history__back-wrapper">
+                  <h2 class="my_title history__back-title">Я учился в НГТУ</h2>
+                  <p class="history__back-text">Истории выпускников университета</p>
+                  <div class="history__links">
+                     <a [routerLink]="['/alumni-stories']" class="my_link history__link">
+                        Все истории
+                     </a>
+                     <a [routerLink]="['/personal-data']" class="my_link history__link">
+                        Рассказать свою
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="history__main col-lg-6">
+               <div class="history__wrapper">
+                  <div class="history__list">
+                     <div class="history__list-item">
+                        <img src="../../../assets/img/main_history/history-one.png" alt="" class="history__list-img">
+                        <div class="history__list-info">
+                           <h3 class="history__list-name">Владимир Игоревич Самокиш</h3>
+                           <p class="history__list-text">
+                              – выпускник экономического факультета ТГУ (1997).
+                           </p>
+                           <p class="history__list-text">
+                              «Лидер России»–2018,
+                           </p>
+                           <p class="history__list-text">
+                              депутат и предприниматель Владимир Самокиш выступил с открытой лекцией о лидерстве в
+                              Институте экономики и менеджмента ТГУ. Аудитория не отпускала спикера два часа, задавая
+                              вопросы о роли личности в
+                              истории, отличиях лидера и менеджера, а также о том, нужны ли лидеры в большом
+                              количестве.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="history__list-item">
+                        <img src="../../../assets/img/main_history/history-two.png" alt="" class="history__list-img">
+                        <div class="history__list-info">
+                           <h3 class="history__list-name">Григорий Михайлович Кружков</h3>
+                           <p class="history__list-text">
+                              – выпускник физического факультета ТГУ (1967).
+                           </p>
+                           <p class="history__list-text">
+                              Григорий Кружков стал лауреатом литературной премии Александра Солженицына в 2016 году.
+                           </p>
+                           <p class="history__list-text">
+                              Известный российский поэт, писатель, эссеист, один из крупнейших в современной России
+                              переводчиков англоязычной поэзии.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="history__list-item">
+                        <img src="../../../assets/img/main_history/history-three.png" alt="" class="history__list-img">
+                        <div class="history__list-info">
+                           <h3 class="history__list-name">Тимур Рашитович Хисматуллин</h3>
+                           <p class="history__list-text">
+                              – выпускник экономического факультета ТГУ (1997).
+
+
+                           </p>
+                           <p class="history__list-text">
+                              В конце декабря выпускник ТГУ, член совета директоров «Сибирской Аграрной Группы» Тимур
+                              Хисматуллин вручил именные стипендии пяти студентам ТГУ. Финансовую поддержку они
+                              получили из
+                              процентов
+                              от вклада, который Тимур Хисматуллин сделал в эндаумент-фонд ТГУ.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <div class="events">
+      <div class="container">
+         <div class="events__wrapper">
+            <div class="my_title events__title">Мероприятия</div>
+            <swiper [pagination]="{
+               clickable: true
+             }" [slidesPerView]="fourEl" [spaceBetween]="30" [slidesPerGroup]="fourEl" [loop]="true"
+               [autoplay]="{delay: 7500, disableOnInteraction: false}" [grabCursor]="true" class="mySwiper">
+               <ng-template swiperSlide>
+                  <a class="events__list-item" href="#">
+                     <img src="../../../assets/img/news/new-1.png" alt="" class="events__list-img">
+                     <a href="" class="events__list-tag events__list-tag--conf">Конференция</a>
+                     <div class="events__list-date">
+                        <img src="../../../assets/img/date.png" alt="" class="events__list-date--img">
+                        25.03.2022 12:54
+                     </div>
+                     <div class="events__list-text">
+                        Встреча Владимира Самокиша со студентами
+                     </div>
+                  </a>
+               </ng-template>
+               <ng-template swiperSlide>
+                  <a class="events__list-item" href="#">
+                     <img src="../../../assets/img/news/new-1.png" alt="" class="events__list-img">
+                     <a href="" class="events__list-tag events__list-tag--lek">Лекция</a>
+                     <div class="events__list-date">
+                        <img src="../../../assets/img/date.png" alt="" class="events__list-date--img">
+                        25.03.2022 12:54
+                     </div>
+                     <div class="events__list-text">
+                        Встреча Владимира Самокиша со студентами
+                     </div>
+                  </a>
+               </ng-template>
+               <ng-template swiperSlide>
+                  <a class="events__list-item" href="#">
+                     <img src="../../../assets/img/news/new-1.png" alt="" class="events__list-img">
+                     <a href="" class="events__list-tag events__list-tag--conf">Конференция</a>
+                     <div class="events__list-date">
+                        <img src="../../../assets/img/date.png" alt="" class="events__list-date--img">
+                        25.03.2022 12:54
+                     </div>
+                     <div class="events__list-text">
+                        Встреча Владимира Самокиша со студентами
+                     </div>
+                  </a>
+               </ng-template>
+               <ng-template swiperSlide>
+                  <a class="events__list-item" href="#">
+                     <img src="../../../assets/img/news/new-1.png" alt="" class="events__list-img">
+                     <a href="" class="events__list-tag events__list-tag--conf">Конференция</a>
+                     <div class="events__list-date">
+                        <img src="../../../assets/img/date.png" alt="" class="events__list-date--img">
+                        25.03.2022 12:54
+                     </div>
+                     <div class="events__list-text">
+                        Встреча Владимира Самокиша со студентами
+                     </div>
+                  </a>
+               </ng-template>
+               <ng-template swiperSlide>
+                  <a class="events__list-item" href="#">
+                     <img src="../../../assets/img/news/new-1.png" alt="" class="events__list-img">
+                     <a href="" class="events__list-tag events__list-tag--conf">Конференция</a>
+                     <div class="events__list-date">
+                        <img src="../../../assets/img/date.png" alt="" class="events__list-date--img">
+                        25.03.2022 12:54
+                     </div>
+                     <div class="events__list-text">
+                        Встреча Владимира Самокиша со студентами
+                     </div>
+                  </a>
+               </ng-template>
+               <ng-template swiperSlide>
+                  <a class="events__list-item" href="#">
+                     <img src="../../../assets/img/news/new-1.png" alt="" class="events__list-img">
+                     <a href="" class="events__list-tag events__list-tag--conf">Конференция</a>
+                     <div class="events__list-date">
+                        <img src="../../../assets/img/date.png" alt="" class="events__list-date--img">
+                        25.03.2022 12:54
+                     </div>
+                     <div class="events__list-text">
+                        Встреча Владимира Самокиша со студентами
+                     </div>
+                  </a>
+               </ng-template>
+               <ng-template swiperSlide>
+                  <a class="events__list-item" href="#">
+                     <img src="../../../assets/img/news/new-1.png" alt="" class="events__list-img">
+                     <a href="" class="events__list-tag events__list-tag--conf">Конференция</a>
+                     <div class="events__list-date">
+                        <img src="../../../assets/img/date.png" alt="" class="events__list-date--img">
+                        25.03.2022 12:54
+                     </div>
+                     <div class="events__list-text">
+                        Встреча Владимира Самокиша со студентами
+                     </div>
+                  </a>
+               </ng-template>
+               <ng-template swiperSlide>
+                  <a class="events__list-item" href="#">
+                     <img src="../../../assets/img/news/new-1.png" alt="" class="events__list-img">
+                     <a href="" class="events__list-tag events__list-tag--conf">Конференция</a>
+                     <div class="events__list-date">
+                        <img src="../../../assets/img/date.png" alt="" class="events__list-date--img">
+                        25.03.2022 12:54
+                     </div>
+                     <div class="events__list-text">
+                        Встреча Владимира Самокиша со студентами
+                     </div>
+                  </a>
+               </ng-template>
+            </swiper>
+
+            <a [routerLink]="['/events']" class="events__link">Все мероприятия</a>
+         </div>
+      </div>
+   </div>
+</div>

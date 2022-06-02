@@ -1,0 +1,39 @@
+<div class="system-inner">
+  <reg-head></reg-head>
+  <div class="registration-top">
+    <div class="registration-top__wrapper container">
+      <h1>Регистрация</h1>
+      <hr class="line">
+      <nav>
+        <div class="nav-link">
+          <a class="registration-top__nav-links" [routerLink]="['/personal-data']">
+            <div class="change-page__list-circle">1</div>
+            <p class="registration-top__nav-links-text">Личные данные</p>
+          </a>
+        </div>
+        <div class="nav-link">
+          <a class="registration-top__nav-links" [routerLink]="['/education']">
+            <div class="change-page__list-circle">2</div>
+            <p class="registration-top__nav-links-text">Образование</p>
+          </a>
+        </div>
+        <div class="nav-link">
+          <a class="registration-top__nav-links" [routerLink]="['/ngtu-education']">
+            <div class="change-page__list-circle">3</div>
+            <p class="registration-top__nav-links-text">Обучение</p>
+          </a>
+        </div>
+        <div class="nav-link">
+          <a class="registration-top__nav-links" [routerLink]="['/career']">
+            <div class="change-page__list-circle">4</div>
+            <p class="registration-top__nav-links-text">Карьера</p>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+  <reg-footer></reg-footer>
+</div>

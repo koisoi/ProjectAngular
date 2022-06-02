@@ -1,0 +1,64 @@
+.branches-main-title{
+  font-family: "Merriweather";
+  font-weight: bold;
+  color:#0072BC;
+  font-size: 64px;
+}
+.branches-text{
+  font-size:20px;
+  font-family: "Open Sans";
+  line-height: 1.5;
+
+}
+.branches-table{
+  width:100%;
+  color:white;
+  font-size:16px;
+  font-family: "Open Sans";
+  text-align: center;
+}
+td{
+  height:70px;
+}
+.color1{
+  background-color: #008EEA;
+  width:10%;
+}
+.color2{
+  background-color: #2B88C3;
+  width:30%;
+}
+.color3{
+  background-color: #4C82A6;
+  width:30%;
+}
+.color4{
+  background-color: #0065A7;
+  width:30%;
+}
+.delimiter{
+  background-color:#1A254A;
+}
+@media  (max-width: 768px){
+  .branches-main-title{
+    font-size: 32px;
+  }
+  .color1{
+    display: none;
+  }
+}
+@media  (max-width: 768px){
+  .branches-table{
+    font-size:12px;
+  }
+}
+@media  (max-width: 360px){
+  .branches-table{
+    font-size:10px;
+  }
+}
+@media  (max-width: 360px){
+  .branches-main-title{
+    font-size: 24px;
+  }
+}

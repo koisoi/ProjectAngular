@@ -1,0 +1,181 @@
+<!-- БЭМ - секция__блок-элемент--модификатор -->
+<header class="header">
+    <div class="header__wrapper">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-wrapper">
+                    <a href="" class="header__top-link">
+                        Сведения об образовательной организации
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__main">
+            <div class="container">
+                <div class="header__main-wrapper">
+                    <a class="header__logo" href="#">
+                        <img src="../../../../../assets/img/logo.png" alt="" class="logo">
+                        <p class="header__main-title">
+                            <span>Нижегородский&nbsp;Государственный
+                                Технический&nbsp;Университет
+                            </span>
+                            <br>
+                            им.&nbsp;Р.Е.&nbsp;Алексеева
+                        </p>
+                    </a>
+
+                    <div class="header__nav">
+                        <div class="header__nav-top">
+                            <div class="socials">
+                                <a href="" class="socials__item">
+                                    <img src="../../../../../assets/img/socials/vk.png" alt="" class="socials__img">
+                                </a>
+                                <a href="" class="socials__item">
+                                    <img src="../../../../../assets/img/socials/odnokl.png" alt="" class="socials__img">
+                                </a>
+                                <a href="" class="socials__item">
+                                    <img src="../../../../../assets/img/socials/youtube.png" alt=""
+                                        class="socials__img">
+                                </a>
+                                <a href="" class="socials__item">
+                                    <img src="../../../../../assets/img/socials/teleg.png" alt="" class="socials__img">
+                                </a>
+                            </div>
+                            <div class="helps">
+                                <button class="helps__item helps__search">
+                                    <img src="../../../../../assets/img/search.svg" alt="" class="hepls__search-img">
+                                </button>
+                                <button class="helps__item helps__eye">
+                                    <img src="../../../../../assets/img/eye.svg" alt="" class="hepls__eye-img">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="header__navlist">
+                            <div class="dropdown">
+                                <a [routerLink]="['/about-project']" class="header__navlist-item">Ассоциация</a>
+                                <div class="dropdown-content">
+                                    <a [routerLink]="['/history']">История ассоциации</a>
+                                    <a [routerLink]="['/congress']">Конгресс выпускников</a>
+                                    <a [routerLink]="['/creativity']">Творчество выпускников</a>
+                                    <a [routerLink]="['/events']">Мероприятия</a>
+                                    <a [routerLink]="['/contacts']">Контакты</a>
+                                </div>
+                            </div>
+                            <a [routerLink]="['/news']" class="header__navlist-item">
+                                Новости
+                            </a>
+                            <div class="dropdown">
+                                <a [routerLink]="['/university-success']" class="header__navlist-item">Успехи
+                                    университета</a>
+                                <div class="dropdown-content">
+                                    <a [routerLink]="['/alumni-stories']">Истории выпускников</a>
+                                    <a [routerLink]="['/outstanding-students']">Выдающиеся выпускники</a>
+                                    <a [routerLink]="['/success-stories']">Истории успеха</a>
+                                    <a [routerLink]="['/suvenirs']">Сувенирная продукция</a>
+                                    <a [routerLink]="['/projects']">Проекты</a>
+                                    <a [routerLink]="['/meetings']">Юбилейные встречи выпускников</a>
+                                </div>
+                            </div>
+                            <!-- <a [routerLink]="['/history']" class="header__navlist-item">
+                                Эндаумент нгту
+                            </a> -->
+                            <div class="dropdown">
+                                <a [routerLink]="['/university-success']" class="header__navlist-item">НГТУ</a>
+                                <div class="dropdown-content">
+                                    <a [routerLink]="['/history-ngtu']">История НГТУ</a>
+                                    <a [routerLink]="['/support']">Поддержка НГТУ</a>
+                                    <a [routerLink]="['/documents']">Отчетная документация</a>
+                                    <a [routerLink]="['/branches']">Филиалы и представительства</a>
+                                    <a [routerLink]="['/association']">Об ассоциации</a>
+                                    <a [routerLink]="['/management']">Руководство</a>
+                                </div>
+                            </div>
+                            <a [routerLink]="['/personal-data']" class="header__navlist-item">
+                                Вступай в ассоциацию
+                            </a>
+                            <div class="dropdown">
+                                <a [routerLink]="['/personal-data']" class="header__navlist-item">Вступай в
+                                    ассоциацию</a>
+                                <div class="dropdown-content">
+                                    <a [routerLink]="['/personal-data']">Зарегистрироваться</a>
+                                    <a [routerLink]="['/auth']">Войти</a>
+                                    <a [routerLink]="['/invite-groupmate']">Пригласить одногруппника</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="header__nav-btn" (click)="navActive()">
+                            <div></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+<div class="mobile__nav" *ngIf="navIsAvtive">
+    <div class="mobile__nav-overlay"></div>
+    <div class="mobile__nav-menu" id="navMenu">
+        <div class="nav-close" (click)="navActive()">
+            <img src="../../../../../assets/img/close.png" alt="" class="nav-close-img">
+        </div>
+        <img src="../../../../../assets/img/logo.png" alt="" class="nav__logo">
+        <hr class="nav__hr">
+        <ul class="nav__list">
+            <li class="nav__list-item">
+                <div class="dropdown">
+                    <a [routerLink]="['/about-project']" class="header__navlist-item">Ассоциация</a>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/history']">История ассоциации</a>
+                        <a [routerLink]="['/congress']">Конгресс выпускников</a>
+                        <a [routerLink]="['/creativity']">Творчество выпускников</a>
+                        <a [routerLink]="['/events']">Мероприятия</a>
+                        <a [routerLink]="['/contacts']">Контакты</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav__list-item">
+                <a [routerLink]="['/news']" class="header__navlist-item">
+                    Новости
+                </a>
+            </li>
+            <li class="nav__list-item">
+                <div class="dropdown">
+                    <a [routerLink]="['/university-success']" class="header__navlist-item">Успехи
+                        университета</a>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/alumni-stories']">Истории выпускников</a>
+                        <a [routerLink]="['/outstanding-students']">Выдающиеся выпускники</a>
+                        <a [routerLink]="['/success-stories']">Истории успеха</a>
+                        <a [routerLink]="['/suvenirs']">Сувенирная продукция</a>
+                        <a [routerLink]="['/projects']">Проекты</a>
+                        <a [routerLink]="['/meetings']">Юбилейные встречи выпускников</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav__list-item">
+                <div class="dropdown">
+                    <a [routerLink]="['/university-success']" class="header__navlist-item">НГТУ</a>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/history-ngtu']">История НГТУ</a>
+                        <a [routerLink]="['/support']">Поддержка НГТУ</a>
+                        <a [routerLink]="['/documents']">Отчетная документация</a>
+                        <a [routerLink]="['/branches']">Филиалы и представительства</a>
+                        <a [routerLink]="['/association']">Об ассоциации</a>
+                        <a [routerLink]="['/management']">Руководство</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav__list-item">
+                <a [routerLink]="['/personal-data']" class="header__navlist-item">
+                    Вступай в ассоциацию
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

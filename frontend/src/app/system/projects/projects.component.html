@@ -1,0 +1,104 @@
+<div class="projects">
+    <div class="projects__wrapper">
+
+        <button *ngIf="scrolled" (click)="scrollToTop()" id="scroll-up"><img class="icon scroll-icon"
+                src="../../../assets/img/triangle.svg" />ВВЕРХ</button>
+
+        <div class="projects__crumbs">
+            <div class="container justify-content-center">
+                <div class="projects__crumbs-wrapper">
+                    <a href="#" class="projects__crumbs-link">
+                        Главная
+                    </a>
+                    &nbsp;/ &nbsp;Проекты выпускников
+                </div>
+            </div>
+        </div>
+
+        <div class="projects__top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="project__top-title">
+                        <h2 class="my_title">
+                            Проекты выпускников
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects__navigation">
+            <div class="container">
+                <div class="navbar">
+                    <ul>
+                        <li>
+                            <a [ngClass]="(selectedYear == 2022) ? 'active-item' : ''" (click)="yearSelect(2022)"
+                                class="navbar-item">
+                                2022
+                            </a>
+                        </li>
+                        <li>
+                            <a [ngClass]="(selectedYear == 2021) ? 'active-item' : ''" (click)="yearSelect(2021)"
+                                class="navbar-item">
+                                2021
+                            </a>
+                        </li>
+                        <li>
+                            <a [ngClass]="(selectedYear == 2020) ? 'active-item' : ''" (click)="yearSelect(2020)"
+                                class="navbar-item">
+                                2020
+                            </a>
+                        </li>
+                        <li>
+                            <a [ngClass]="(selectedYear == 2019) ? 'active-item' : ''" (click)="yearSelect(2019)"
+                                class="navbar-item">
+                                2019
+                            </a>
+                        </li>
+                        <li>
+                            <a [ngClass]="(selectedYear == 2018) ? 'active-item' : ''" (click)="yearSelect(2018)"
+                                class="navbar-item">
+                                2018
+                            </a>
+                        </li>
+                        <li>
+                            <a [ngClass]="(selectedYear == 2017) ? 'active-item' : ''" (click)="yearSelect(2017)"
+                                class="navbar-item">
+                                2017
+                            </a>
+                        </li>
+                        <li>
+                            <a [ngClass]="(selectedYear == 2016) ? 'active-item' : ''" (click)="yearSelect(2016)"
+                                class="navbar-item">
+                                2016
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects__row" *ngFor="let proj of projects">
+            <div class="projects__row-wrapper row rows-cols-1 justify-content-center">
+                <div class="project col-11 col-sm-8">
+                    <div
+                        class="project-wrapper row row-cols-1 row-cols-lg-2 align-items-center justify-content-between">
+                        <div class="project-img col-11 col-lg-5">
+                            <img src={{proj.img}}>
+                        </div>
+                        <div class="project-text row rows-cols-1 col-11 col-lg-7 justify-content-center">
+                            <div class="project-title col-12">{{proj.title}}</div>
+                            <div class="project-info col-12" [innerHTML]="proj.info">
+
+                            </div>
+                            <div class="project-read-more-wrapper col-12"><a class="project-read-more">читать больше
+                                    >></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

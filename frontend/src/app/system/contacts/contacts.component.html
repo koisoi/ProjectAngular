@@ -1,0 +1,83 @@
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=cb71c961-6926-4168-84c7-7b9544e967bd"
+  type="text/javascript"></script>
+
+
+<div class="History">
+  <div class="success__crumbs">
+    <div class="container justify-content-center">
+      <div class="success__crumbs-wrapper">
+        <a [routerLink]="['/']" class="success__crumbs-link">
+          Главная
+        </a>
+        &nbsp;/ &nbsp;Контакты
+      </div>
+    </div>
+  </div>
+  <div class="success__top">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 justify-content-between align-items-center">
+        <div class="success__top-title col-md-8">
+          <h2 class="my_title">
+            Контакты
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contacts">
+    <div class="container">
+      <p class="p-text">
+        <strong>Адрес:</strong> г. Нижний Новгород, ул. Минина 28. <br>
+        <strong>Тел.:</strong> +7(831) 436-63-07 <br>
+        («Отдел делопроизводства и документооборота») <br>
+        <strong>Факс:</strong> +7(831) 436-94-75 <br>
+        <strong>E-mail:</strong> nntu@nntu.ru <br>
+      </p>
+    </div>
+  </div>
+
+  <div class="map" id="map-test">
+    <ya-map [center]="[56.3257915206499,44.02913234497109]" [zoom]="17">
+      <ya-placemark [geometry]="[56.3257915206499,44.02913234497109]"></ya-placemark>
+    </ya-map>
+  </div>
+
+  <body>
+    <section class="gallery">
+      <div class="container">
+        <div id="gallery">
+          <figure class="photo">
+            <a href="../../../assets/img/congress/corpus1.jpg" data-lightbox="roadtrip" data-title="Корпус 1"><img
+                src="../../../assets/img/congress/corpus1.jpg" /></a>
+            <figcaption> <strong> Корпус 1: </strong> г. Нижний Новгород, ул. Минина, д. 24</figcaption>
+          </figure>
+          <figure class="photo">
+            <a href="../../../assets/img/congress/corpus2.jpg" data-lightbox="roadtrip" data-title="Корпус 2"><img
+                src="../../../assets/img/congress/corpus2.jpg" /></a>
+            <figcaption> <strong> Корпус 2: </strong> г. Нижний Новгород, ул. Минина, д. 28Б</figcaption>
+          </figure>
+          <figure class="photo">
+            <a href="../../../assets/img/congress/corpus3.jpg" data-lightbox="roadtrip" data-title="Корпус 3"><img
+                src="../../../assets/img/congress/corpus4.jpg" /></a>
+            <figcaption> <strong> Корпус 3: </strong> г. Нижний Новгород, ул. Минина, д. 28А </figcaption>
+          </figure>
+          <figure class="photo">
+            <a href="../../../assets/img/congress/corpus4.jpg" data-lightbox="roadtrip" data-title="Корпус 4"><img
+                src="../../../assets/img/congress/corpus3.jpg" /></a>
+            <figcaption> <strong> Корпус 4: </strong> г. Нижний Новгород, ул. Минина, д. 28В</figcaption>
+          </figure>
+          <figure class="photo">
+            <a href="../../../assets/img/congress/corpus5.jpg" data-lightbox="roadtrip" data-title="Корпус 5"><img
+                src="../../../assets/img/congress/corpus5.jpg" /></a>
+            <figcaption> <strong> Корпус 5: </strong> г. Нижний Новгород, ул. Минина, д. 28Л</figcaption>
+          </figure>
+          <figure class="photo">
+            <a href="../../../assets/img/congress/corpus6.jpg" data-lightbox="roadtrip" data-title="Корпус 6"><img
+                src="../../../assets/img/congress/corpus6.jpg" /></a>
+            <figcaption> <strong> Корпус 6: </strong> г. Нижний Новгород, Казанское шоссе, д. 12</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </body>
+</div>
